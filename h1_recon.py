@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup, Comment
 requests.packages.urllib3.disable_warnings()
 
 # --- CONFIGURATION ---
-H1_USERNAME = "too_kryll"
+H1_USERNAME = "USERNAME"
 WORDLIST = os.path.expanduser("~/wordlists/common.txt")
 PORTS = (
     21, 22, 23, 25, 53, 80, 110, 143, 443, 445,
