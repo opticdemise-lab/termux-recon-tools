@@ -1,11 +1,27 @@
-Hello there, these are my codes, as of Nov, 19, 26 I am currently working on Spyder.py I'll try and update the read me as best as I can P.S I'll probably forget.
+# A Toolkit I'm working on currently Nov 19 26 P.S I will probably forget to update.
 
-I will say this h1_recon.py is a business code specifically made for HackerOne and needs a bit of tweaking.
+A collection of custom reconnaissance and automation scripts. 
 
-USERNAME = YOUR OWN TAG [IN THE CONFIG]
+> **Disclaimer:** These tools are intended for educational purposes and authorized security testing only. Users are responsible for complying with all applicable laws and program rules.
 
-Also Im not gonna update the rates for FFUF if you want to change the rate this is what I have done.
+## Scripts Included
 
-"-ac", "-t", "4", "-rate", "4", "-timeout", "18", "-noninteractive" 
+* **`recon.py` (Stable):** General reconnaissance script that routes output directly into an encrypted vault.
+* **`h1_recon.py` (Bug Bounty):** Tailored specifically for HackerOne targets. Requires minor configuration before running.
+* **`Spyder.py` (In Development):** Currently a work in progress—check back for updates.
 
-the recon.py is basically finished. it's similar to the h1_recon but without the tag and goes to an encryption vault.
+---
+
+## Setup & Configuration
+
+### 1. HackerOne Tag (`h1_recon.py`)
+Before running `h1_recon.py`, open your config file and set your personal HackerOne identifier so your traffic is properly tagged:
+```python
+USERNAME = "YOUR_OWN_TAG"
+```
+
+### 2. Adjusting FFUF Rate Limits
+By default, FFUF is configured with conservative rate limits to avoid getting blocked or violating program rules. If you want to adjust the speed or threads, modify the flags in the script here:
+```python
+"-ac", "-t", "4", "-rate", "4", "-timeout", "18", "-noninteractive"
+```
